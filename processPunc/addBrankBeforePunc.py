@@ -22,8 +22,8 @@ punctuation_spacing_patterns = compile_patterns([
 def get_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--inputScipt',
-        dest='inputscipt',
+        '--inputScript',
+        dest='inputscript',
         default=None)
     parser.add_argument(
         '--outputScript',
@@ -45,8 +45,8 @@ def punctuation_addspace(text, punc_list):
         processed_text = processed_text.replace(item, " {} ".format(item))
     return processed_text
 
-def process_file(inputscipt, outputscript, punctuation_spacing_patterns, punc_list):
-    with open(inputscipt, 'r', encoding='utf-8') as f_in:
+def process_file(inputscript, outputscript, punctuation_spacing_patterns, punc_list):
+    with open(inputscript, 'r', encoding='utf-8') as f_in:
         lines = f_in.readlines()
 
     f_out = open(outputscript, 'w', encoding='utf-8')
@@ -62,7 +62,7 @@ def process_file(inputscipt, outputscript, punctuation_spacing_patterns, punc_li
 
 if __name__ == "__main__":
     args = get_arguments()
-    inputscipt = args.inputscipt
+    inputscript = args.inputscript
     outputscript = args.outputscript
-    process_file(inputscipt, outputscript, punctuation_spacing_patterns, punc_list)
+    process_file(inputscript, outputscript, punctuation_spacing_patterns, punc_list)
 
