@@ -3,13 +3,14 @@ import sys
 import argparse
 import re
 
-illegal_pattern = r'[0-9@&#*+$•|©`®×ø=ïíáéñàó]'
+#illegal_pattern = r'[0-9@&#*+$•|©`®×ø=ïíáéñàó]'
+illegal_pattern = r'[a-zA-Z0-9+|%=_@*•ä#٪¬×—„₂&\Â☔·❄️️⛄❤~ﻈ﴿﴾²●™®Áí◀☀：⁩¼½̎√▪ۆ]'
 
 def get_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--inputScipt',
-        dest='inputscipt',
+        '--inputScript',
+        dest='inputscript',
         default=None)
     parser.add_argument(
         '--outputScript',
@@ -42,8 +43,8 @@ def getCharSet(inputfile, outputfile):
     f_out.close()
 
 
-def filterScript(inputscipt, outputscript):
-    with open(inputscipt, 'r', encoding='utf-8') as f_in:
+def filterScript(inputscript, outputscript):
+    with open(inputscript, 'r', encoding='utf-8') as f_in:
         lines = f_in.readlines()
     
     count = 0
@@ -63,6 +64,6 @@ def filterScript(inputscipt, outputscript):
 
 if __name__ == "__main__":
     args = get_arguments()
-    inputscipt = args.inputscipt
+    inputscript = args.inputscript
     outputscript = args.outputscript
-    filterScript(inputscipt, outputscript)
+    filterScript(inputscript, outputscript)
