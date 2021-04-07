@@ -7,7 +7,7 @@ compile_patterns = lambda patterns: [(re.compile(pattern), repl) for pattern, re
 
 # Farsi punctuation
 punc_after, punc_before = r'\.:!،؛؟»\]\)\}', r'«\[\(\{'
-punc_list = [r'.', r':', r'!', r'،', r'؛', r'؟', r'«', r'»', r'[', r']', r'(', r')', r'{', r'}', r';', r'…', r'٬', r'"']
+punc_list = [r'.', r':', r'!', r'،', r'؛', r'؟', r'«', r'»', r'[', r']', r'(', r')', r'{', r'}', r';', r'…', r'٬', r'"', r'/', r'-', r'–', r'<', r'>', r'?']
 
 # Punctuation pattern
 punctuation_spacing_patterns = compile_patterns([
