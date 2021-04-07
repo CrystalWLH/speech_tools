@@ -3,8 +3,8 @@ import sys
 import argparse
 import re
 
-#illegal_pattern = r'[0-9@&#*+$•|©`®×ø=ïíáéñàó]'
-illegal_pattern = r'[a-zA-Z0-9+|%=_@*•ä#٪¬×—„₂&\Â☔·❄️️⛄❤~ﻈ﴿﴾²●™®Áí◀☀：⁩¼½̎√▪ۆ]'
+illegal_pattern = r'[0-9@&#*+$•|©`®×ø=ïíáéñàó]'
+#illegal_pattern = r'[a-zA-Z0-9+|%=_@*•ä#٪¬×—„₂&\Â☔·❄️️⛄❤~ﻈ﴿﴾²●™®Áí◀☀：⁩¼½̎√▪ۆ]'
 
 def get_arguments():
     parser = argparse.ArgumentParser()
